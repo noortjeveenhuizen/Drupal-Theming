@@ -1,0 +1,24 @@
+{%
+  set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'text-background-color-' ~ content.field_background_color[0]['#plain_text']|clean_class
+]
+%}
+
+{% 
+set image_url = file_url(content.field_background_image[0]['#media'].field_media_image.entity.uri.value) 
+%}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }} class="background-image-media" style="background: url('{{ image_url }}'); height: 800px; background-size: cover; background-repeat: no-repeat;">
+      {% block content %}
+        {{ content|without('field_background_image', 'field_background_color', 'field_text') }}
+         <div class = "text-background-color-{{ content.field_background_color[0]['#plain_text']|lower }} textbackgroundimage">
+        {{ content.field_text }}
+      </div>
+      {% endblock %}
+  </div>
+{% endblock paragraph %}

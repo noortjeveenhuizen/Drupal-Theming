@@ -1,0 +1,23 @@
+{%
+  set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'align-noor-' ~ content.field_align_form[0]['#plain_text']|clean_class,
+  'background-color-' ~ content.field_background_color[0]['#plain_text']|clean_class
+]
+%}
+{% block paragraph %}
+  <div {{ attributes.addClass(classes) }} style="background-size: 100%;">
+ 
+    {% block content %}
+      <div class="text-noor">
+        {{ content|without('field_align_form', 'field_background_color', 'field_form') }}
+      </div>
+      <div class="image-noor">
+        {{ content.field_form }}
+      </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

@@ -2467,6 +2467,67 @@
         }
     },
     {
+        "name": "drupal/block_field",
+        "version": "1.0.0-alpha8",
+        "version_normalized": "1.0.0.0-alpha8",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/block_field.git",
+            "reference": "8.x-1.0-alpha8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/block_field-8.x-1.0-alpha8.zip",
+            "reference": "8.x-1.0-alpha8",
+            "shasum": "faffdd869263c3103f5c6a7a8d71ac440df1115f"
+        },
+        "require": {
+            "drupal/core": "~8.0"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.0-alpha8",
+                "datestamp": "1536732480",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Project has not opted into security advisory coverage!"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "acbramley",
+                "homepage": "https://www.drupal.org/user/1036766"
+            },
+            {
+                "name": "fenstrat",
+                "homepage": "https://www.drupal.org/user/362649"
+            },
+            {
+                "name": "jrockowitz",
+                "homepage": "https://www.drupal.org/user/371407"
+            },
+            {
+                "name": "michaellander",
+                "homepage": "https://www.drupal.org/user/636494"
+            }
+        ],
+        "description": "Provides a field that allows a content entity to create and configure custom block instances.",
+        "homepage": "https://www.drupal.org/project/block_field",
+        "support": {
+            "source": "https://git.drupalcode.org/project/block_field"
+        }
+    },
+    {
         "name": "drupal/coder",
         "version": "8.3.6",
         "version_normalized": "8.3.6.0",
@@ -3083,6 +3144,71 @@
         "homepage": "https://www.drupal.org/project/paragraphs",
         "support": {
             "source": "https://git.drupalcode.org/project/paragraphs"
+        }
+    },
+    {
+        "name": "drupal/paragraphs_browser",
+        "version": "1.0.0-beta1",
+        "version_normalized": "1.0.0.0-beta1",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupalcode.org/project/paragraphs_browser.git",
+            "reference": "8.x-1.0-beta1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/paragraphs_browser-8.x-1.0-beta1.zip",
+            "reference": "8.x-1.0-beta1",
+            "shasum": "4bc0f948d07f3b5c77209794449acd708c493107"
+        },
+        "require": {
+            "drupal/core": "~8.0",
+            "drupal/paragraphs": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.0-beta1",
+                "datestamp": "1558728785",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Beta releases are not covered by Drupal security advisories."
+                }
+            },
+            "patches_applied": {
+                "3057621 - Fix Undefined index: paragraph_type_title": "https://www.drupal.org/files/issues/2019-07-18/undefined-index-paragraph_type_title-trait-3057621-7.patch"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Deciphered",
+                "homepage": "https://www.drupal.org/user/103796"
+            },
+            {
+                "name": "Mojiferous",
+                "homepage": "https://www.drupal.org/user/1678298"
+            },
+            {
+                "name": "michaellander",
+                "homepage": "https://www.drupal.org/user/636494"
+            },
+            {
+                "name": "tandroid",
+                "homepage": "https://www.drupal.org/user/2879591"
+            }
+        ],
+        "description": "Provides browser for adding additional paragraphs.",
+        "homepage": "https://www.drupal.org/project/paragraphs_browser",
+        "support": {
+            "source": "https://git.drupalcode.org/project/paragraphs_browser"
         }
     },
     {

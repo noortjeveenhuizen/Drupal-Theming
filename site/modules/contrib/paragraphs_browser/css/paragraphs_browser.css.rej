@@ -1,0 +1,19 @@
+***************
+*** 6,11 ****
+    margin-bottom: 2em;
+  }
+  
+  .paragraphs-browser-wrapper .form-item-filters {
+    display: inline-block;
+  }
+--- 6,15 ----
+    margin-bottom: 2em;
+  }
+  
++ .field--widget-entity-reference-paragraphs-browser .js-hide {
++   display: none !important;
++ }
++ 
+  .paragraphs-browser-wrapper .form-item-filters {
+    display: inline-block;
+  }

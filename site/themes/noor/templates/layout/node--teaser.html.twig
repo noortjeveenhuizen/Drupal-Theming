@@ -1,0 +1,22 @@
+{%
+  set classes = [
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  not paragraph.isPublished() ? 'paragraph--unpublished',
+  'align-noor-' ~ content.field_align_view[0]['#plain_text']|clean_class,
+  'background-color-' ~ content.field_background_color[0]['#plain_text']|clean_class
+]
+%}
+{% block paragraph %}
+      {% block content %}
+        <div class="image-noor">
+          {{ content|without('field_teaser_text') }}
+        </div>
+        <div class="text-noor">
+          {{ content.field_teaser_text }}
+        </div>
+
+      {% endblock %}
+
+{% endblock paragraph %}

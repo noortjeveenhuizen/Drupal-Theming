@@ -1,0 +1,11 @@
+global:
+  version: VERSION
+  css: 
+    component:
+      css/styles.css: {}
+  js:
+    js/noor.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
